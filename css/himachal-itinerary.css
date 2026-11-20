@@ -1,0 +1,60 @@
+/* Himachal itinerary page: same shared layout and spacing as Kerala / Nainital. */
+.himachal-hero{
+ background-image:linear-gradient(90deg,rgba(4,37,61,.88) 0%,rgba(4,37,61,.58) 48%,rgba(4,37,61,.14) 100%),url("../images/himachal-hero.webp")!important;
+ background-size:cover!important;background-position:center top!important;
+}
+.himachal-hero:after{background:linear-gradient(0deg,rgba(2,29,49,.26),transparent 52%)!important;}
+.himachal-photo-strip{
+ display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;
+ margin:0 auto 36px;padding:0 10px;
+}
+.himachal-photo-strip img{
+ display:block;width:100%;height:146px;object-fit:cover;border-radius:14px;
+ border:1px solid #dbe5ee;box-shadow:0 8px 22px rgba(16,43,89,.10);
+}
+@media(max-width:760px){
+ .himachal-photo-strip{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:26px;}
+ .himachal-photo-strip img{height:146px;border-radius:11px;}
+}
+
+
+/* Consistent Tour Overview layout across every package page:
+   equal-width copy and image columns; content wraps inside its own column. */
+@media (min-width: 761px) {
+  .overview {
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+    gap: 34px !important;
+    align-items: center !important;
+  }
+  .overview-copy,
+  .overview-image {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+  .overview-meta {
+    min-width: 0 !important;
+    display: grid !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) !important;
+  }
+  .overview-meta span {
+    min-width: 0 !important;
+  }
+  .overview-meta small {
+    white-space: normal !important;
+    overflow-wrap: anywhere !important;
+  }
+}
+@media (max-width: 760px) {
+  .overview {
+    grid-template-columns: minmax(0, 1fr) !important;
+    gap: 16px !important;
+  }
+  .overview-copy,
+  .overview-image {
+    min-width: 0 !important;
+    width: 100% !important;
+    max-width: 100% !important;
+  }
+}
